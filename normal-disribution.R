@@ -1,5 +1,4 @@
 if (!require('ggplot2')) { install.packages('ggplot2'); library('ggplot2') }
-#### NORMAL DISTRIBUTION ####
 sd = 10
 mean = 170
 exposed = rnorm(1000, sd = sd, mean = mean)
@@ -19,4 +18,5 @@ ggplot(mapping = aes(x=x, y=y)) + geom_line(data = d) +
   geom_text(aes(label=c('13.5%', '13.5%')), x = mean + c(1.5*sd, -1.5*sd), y = 0.005, angle=90) +
 
   geom_area(data = subset(d, x < mean-2*sd),fill = 'steelblue')
+
 pnorm(1.97, lower.tail = TRUE)
