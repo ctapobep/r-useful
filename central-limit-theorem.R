@@ -17,3 +17,4 @@ qplot(samples, width=0.5, binwidth=1) + geom_vline(x=mean(samples), color='red',
 
 sd(samples) #standard error
 sd(sample(population$x, 50))/sqrt(50) #standard error
+
